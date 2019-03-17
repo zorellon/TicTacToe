@@ -13,6 +13,6 @@ public class TicTacToeLogic {
 		this.userMarker = playerToken;
 		this.aiMarker = aiMarker;
 		this.winner = '-';
-		//this.board = setBoard();
+	`this.board = setBoard();
 	}
 }
