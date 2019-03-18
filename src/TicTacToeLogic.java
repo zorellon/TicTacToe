@@ -33,4 +33,11 @@ public class TicTacToeLogic {
 		}
 		return isValid;
 	}
+	public boolean withinRange(int number) {
+		return number >0 && number < board.length + 1;
+	}
+	
+	public boolean isSpotTaken (int number) {
+		return board[number-1] != '-';
+	}
 }
