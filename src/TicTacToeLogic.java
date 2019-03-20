@@ -1,7 +1,7 @@
 
 public class TicTacToeLogic {
 	
-	// Vairiables
+	// Variables
 	protected char[] board;
 	protected char userMarker;
 	protected char aiMarker;
@@ -39,5 +39,29 @@ public class TicTacToeLogic {
 	
 	public boolean isSpotTaken (int number) {
 		return board[number-1] != '-';
+	}
+	
+	public void printBoard() {
+		System.out.println();
+		for (int i = 0; i < board.length; i++) {
+			if (i % 3 == 0 && i != 0) {
+				System.out.println();
+				System.out.println("-------------------");
+			}
+			System.out.print("|"+ board[i]);
+		}
+		System.out.println();
+	}
+	
+	public void printIndexBoard() {
+		System.out.println();
+		for (int i = 0; i < board.length; i++) {
+			if (i % 3 == 0 && i != 0) {
+				System.out.println();
+				System.out.println("-------------------");
+			}
+			System.out.print("|"+ (i+1));
+		}
+		System.out.println();
 	}
 }
