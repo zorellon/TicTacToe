@@ -13,17 +13,25 @@ public class TicTacToe {
 					+"Are you ready to face the Ai?");
 			System.out.println();
 			System.out.println("Choose If you would like to be X's or O's by entering it now.");
-			char playerToken = scan.next().charAt(0);
-			char aiToken;
-			if (playerToken == 'o' || playerToken == 'O' ) {
-				aiToken = 'X';
-			}else if (playerToken == 'x' || playerToken == 'X' ) {
-				aiToken = 'O';
-			}else {
-				aiToken = 'X';
+			
+			
+			boolean chooseToken = false;
+			char playerToken = scan.next().charAt(0);;
+			char aiToken = 'O';
+			while(chooseToken) {
+				if (playerToken == 'o' || playerToken == 'O' ) {
+					aiToken = 'X';
+					chooseToken = true;
+				}else if (playerToken == 'x' || playerToken == 'X' ) {
+					aiToken = 'O';
+					chooseToken = true;
+				}else {
+					chooseToken = false;
+				}
+			
 			}
 			
-			TicTacToeLogic game = new TicTacToeLogic(playerToken,aiToken);
+			TicTacToeLogic game = new TicTacToeLogic(playerToken, aiToken);
 			AI ai = new AI();
 			
 			//Setup Game
